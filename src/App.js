@@ -1,13 +1,15 @@
 import React from "react";
 // import axios from "axios";
 
-import 'bootstrap/dist/css/bootstrap.css';
-import HomePage from "./components/HomePage";
+
 // import Modal from "./components/Modal";
+import Routes from "./Routes";
 
 function App() {
   return (
-    <HomePage/>
+    <div>
+      <Routes/>
+    </div>
   );
 }
 
