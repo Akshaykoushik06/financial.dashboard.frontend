@@ -6,7 +6,9 @@ function Networth() {
             <div className="container">
                 <h1 className="display-4 text-center">Networth</h1>
                 <br />
-                <p className="lead text-center">Here you will see the networth</p>
+                <h2 className="h1 text-center">&#8377; 9,400.00</h2>
+                {/* <br />
+                <p className="lead text-center">(Assets - Liabilities)</p> */}
             </div>
         </div>
     )
