@@ -10,11 +10,13 @@ import LoansEMIsPage from './components/Loans-EMIs Page/LoansEMIsPage';
 import MFsPage from './components/Mutual Funds Page/MFPage';
 import PFsPage from './components/Provident Funds Page/PFPage';
 import StocksPage from './components/Stocks Page/StocksPage';
+import Navbar from './components/Shared/Navbar';
 
 function Routes() {
     return (
         <div>
             <Router>
+                <Navbar />
                 <Switch>
                     <Route path="/" exact component={HomePage} />
                     <Route path="/bankacc" component={BankAcc} />
