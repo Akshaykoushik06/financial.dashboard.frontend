@@ -11,7 +11,7 @@ function HomePage() {
             <Assets />
             <Liabilities />
         </div>
-    )
+    );
 }
 
 export default HomePage;

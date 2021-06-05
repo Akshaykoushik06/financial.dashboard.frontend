@@ -1,16 +1,15 @@
-import React from "react";
-// import axios from "axios";
-
+import React from 'react';
+// import axios from 'axios';
 
 // import Modal from "./components/Modal";
-import Routes from "./Routes";
+import Routes from './Routes';
 
 function App() {
-  return (
-    <div>
-      <Routes/>
-    </div>
-  );
+    return (
+        <div>
+            <Routes />
+        </div>
+    );
 }
 
 // class App extends Component {
