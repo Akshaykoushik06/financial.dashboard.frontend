@@ -53,7 +53,7 @@ function BankAccounts() {
                     </div>
                 </Link>
             </div>
-            {/* <div class="badge badge-pill badge-primary"><InfoIcon /> Click on each card for more information</div> */}
+            {/* <div className="badge badge-pill badge-primary"><InfoIcon /> Click on each card for more information</div> */}
         </div>
     )
 }
