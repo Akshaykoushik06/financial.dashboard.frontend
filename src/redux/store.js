@@ -1,14 +1,11 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
 
-const initialState = {
-    netWorth: '10,000.00',
-};
+import { reducer } from './homePage/reducer';
 
-function reducer(state = initialState, action) {
-    return state;
-}
+const enhancers = compose(
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-export const store = createStore(reducer);
-
-// Actions
-// export const
+export const store = createStore(reducer, enhancers);

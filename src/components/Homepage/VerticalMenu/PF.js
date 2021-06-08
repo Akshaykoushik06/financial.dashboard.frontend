@@ -1,12 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+
+import { getAssets } from '../../../redux/homePage/selectors';
 
 function PFVMenu() {
+    const providentFund = useSelector(getAssets).providentFund;
+
     return (
         <div className="card-deck">
             <div className="card">
                 <div className="card-body">
-                    <h5 className="card-title">Employee Provident Fund (EPF)</h5>
-                    <p className="card-text">&#8377; 2,350.00</p>
+                    <h5 className="card-title">
+                        Employee Provident Fund (EPF)
+                    </h5>
+                    <p className="card-text">&#8377; {providentFund.value}</p>
                 </div>
             </div>
             {/* <div className="card">
@@ -22,7 +29,7 @@ function PFVMenu() {
                 </div>
             </div> */}
         </div>
-    )
+    );
 }
 
 export default PFVMenu;

@@ -1,12 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+
+import { getLiabilities } from '../../../redux/homePage/selectors';
 
 function LoansVMenu() {
+    const loans = useSelector(getLiabilities).loans;
+
     return (
         <div className="card-deck">
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">2-Wheeler Loan</h5>
-                    <p className="card-text">&#8377; 5,000.00</p>
+                    <p className="card-text">&#8377; {loans.twoWheelerLoan}</p>
                 </div>
             </div>
             {/* <div className="card">
@@ -22,7 +27,7 @@ function LoansVMenu() {
                 </div>
             </div> */}
         </div>
-    )
+    );
 }
 
 export default LoansVMenu;

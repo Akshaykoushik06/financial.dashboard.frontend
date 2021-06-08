@@ -1,12 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+
+import { getLiabilities } from '../../../redux/homePage/selectors';
 
 function IncomeTaxVMenu() {
+    const incomeTax = useSelector(getLiabilities).incomeTax;
+
     return (
         <div className="card-deck">
             <div className="card bg-danger text-white">
                 <div className="card-body">
                     <h5 className="card-title">Income Tax for FY21-22</h5>
-                    <p className="card-text">&#8377; 3,500.00</p>
+                    <p className="card-text">&#8377; {incomeTax.tax}</p>
                 </div>
             </div>
             {/* <div className="card">
@@ -22,7 +27,7 @@ function IncomeTaxVMenu() {
                 </div>
             </div> */}
         </div>
-    )
+    );
 }
 
 export default IncomeTaxVMenu;
