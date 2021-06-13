@@ -1,12 +1,15 @@
 import React from 'react';
 
+import CurrentBalance from './CurrentBalance';
+import Transactions from './Transactions';
 
 function FoodCardPage() {
     return (
         <div>
-            <h1>Food Card Page</h1>
+            <CurrentBalance />
+            <Transactions />
         </div>
-    )
+    );
 }
 
 export default FoodCardPage;

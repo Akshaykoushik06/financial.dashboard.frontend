@@ -9,27 +9,27 @@ function Navbar() {
         <nav className="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul className="navbar-nav mr-auto">
-                    <Link to="/stocks">
+                    <Link to="/stocks" className="text-decoration-none">
                         <li className="nav-item active">
                             <span className="nav-link">Stocks</span>
                         </li>
                     </Link>
-                    <Link to="/mutualfunds">
+                    <Link to="/mutualfunds" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Mutual Funds</span>
                         </li>
                     </Link>
-                    <Link to="/gold">
+                    <Link to="/gold" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Gold</span>
                         </li>
                     </Link>
-                    <Link to="/foodcard">
+                    <Link to="/foodcard" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Food Card</span>
                         </li>
                     </Link>
-                    <Link to="/pf">
+                    <Link to="/pf" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Provident Fund</span>
                         </li>
@@ -37,7 +37,7 @@ function Navbar() {
                 </ul>
             </div>
             <div className="mx-auto order-0">
-                <Link to="/">
+                <Link to="/" className="text-decoration-none">
                     <span className="navbar-brand mx-auto">
                         Financial Dashboard
                     </span>
