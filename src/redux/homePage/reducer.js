@@ -1,7 +1,6 @@
-import { GET_HOMEPAGE_DATA_SUCCESSFUL, GET_HOMEPAGE_DATA } from './actions';
+import { GET_HOMEPAGE_DATA_SUCCESSFUL } from './actions';
 
 const initialState = {
-    isLoading: false,
     netWorth: 18000,
     assets: {
         totalAssets: 1900.0,
@@ -50,16 +49,13 @@ const initialState = {
 };
 
 // reducer
-export function reducer(state = initialState, action) {
+export function homePageReducer(state = initialState, action) {
     switch (action.type) {
-        case GET_HOMEPAGE_DATA:
-            return { ...state, isLoading: true };
         case GET_HOMEPAGE_DATA_SUCCESSFUL:
             return {
                 netWorth: action.payload.netWorth,
                 assets: action.payload.assets,
                 liabilities: action.payload.liabilities,
-                isLoading: false,
             };
         default:
             return state;

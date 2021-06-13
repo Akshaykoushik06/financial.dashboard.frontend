@@ -1,5 +1,4 @@
-// export const getHomePageData = (state) => state.netWorth;
-export const getNetworth = (state) => state.netWorth;
-export const getAssets = (state) => state.assets;
-export const getLiabilities = (state) => state.liabilities;
-export const isLoading = (state) => state.isLoading;
+// selectors for homePage state
+export const getNetworth = (state) => state.homePage.netWorth;
+export const getAssets = (state) => state.homePage.assets;
+export const getLiabilities = (state) => state.homePage.liabilities;
