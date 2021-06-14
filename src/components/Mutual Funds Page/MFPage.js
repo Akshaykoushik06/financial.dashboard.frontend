@@ -7,7 +7,7 @@ import UnitsSold from './UnitsSold';
 function MFsPage() {
     return (
         <div>
-            <LifeTimeStats />
+            <LifeTimeStats title="Mutual Funds" stats={true} />
             <UnitsHeld />
             <UnitsSold />
         </div>

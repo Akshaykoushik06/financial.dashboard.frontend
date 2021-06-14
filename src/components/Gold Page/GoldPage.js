@@ -7,7 +7,7 @@ import CurrentValue from './CurrentValue';
 function GoldPage() {
     return (
         <div>
-            <LifeTimeStats />
+            <LifeTimeStats title="Gold" stats={true} />
             <GramsHeld />
             <CurrentValue />
         </div>

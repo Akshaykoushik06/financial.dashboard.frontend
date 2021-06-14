@@ -8,7 +8,7 @@ import StocksSold from './StocksSold';
 function StocksPage() {
     return (
         <div>
-            <LifeTimeStats title="Stocks" />
+            <LifeTimeStats title="Stocks" stats={true} />
             <NextToSell />
             <StocksHeld />
             <StocksSold />

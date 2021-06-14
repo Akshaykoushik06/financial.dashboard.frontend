@@ -10,7 +10,7 @@ function Navbar() {
             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul className="navbar-nav mr-auto">
                     <Link to="/stocks" className="text-decoration-none">
-                        <li className="nav-item active">
+                        <li className="nav-item">
                             <span className="nav-link">Stocks</span>
                         </li>
                     </Link>
