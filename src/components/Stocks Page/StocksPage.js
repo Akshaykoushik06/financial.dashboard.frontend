@@ -1,12 +1,19 @@
 import React from 'react';
 
+import LifeTimeStats from '../Shared/LifetimeStats';
+import NextToSell from './NextToSell';
+import StocksHeld from './StocksHeld';
+import StocksSold from './StocksSold';
 
 function StocksPage() {
     return (
         <div>
-            <h1>Stocks Page</h1>
+            <LifeTimeStats title="Stocks" stats={true} />
+            <NextToSell />
+            <StocksHeld />
+            <StocksSold />
         </div>
-    )
+    );
 }
 
 export default StocksPage;

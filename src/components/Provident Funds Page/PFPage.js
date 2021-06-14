@@ -1,12 +1,17 @@
 import React from 'react';
 
+import LifeTimeStats from '../Shared/LifetimeStats';
+import CurrentBalance from './CurrentBalance';
+import Transactions from './Transactions';
 
 function PFsPage() {
     return (
         <div>
-            <h1>Provident Funds Page</h1>
+            <LifeTimeStats title="Provident Fund" />
+            <CurrentBalance />
+            <Transactions />
         </div>
-    )
+    );
 }
 
 export default PFsPage;
