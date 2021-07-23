@@ -30,7 +30,7 @@ function Routes() {
                 </Switch>
             </Router>
         </div>
-    )
+    );
 }
 
 export default Routes;
