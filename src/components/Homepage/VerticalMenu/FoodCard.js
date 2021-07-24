@@ -1,17 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { getAssets } from '../../../redux/homePage/selectors';
+import { getFoodCardBalance } from '../../../redux/homePage/selectors';
 
 function FoodCardVMenu() {
-    const foodCard = useSelector(getAssets).foodCard;
+    const foodCardBalance = useSelector(getFoodCardBalance);
 
     return (
         <div className="card-deck">
             <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">Happay Food Card</h5>
-                    <p className="card-text">&#8377; {foodCard.value}</p>
+                    <p className="card-text">&#8377; {foodCardBalance}</p>
                 </div>
             </div>
             {/* <div className="card">

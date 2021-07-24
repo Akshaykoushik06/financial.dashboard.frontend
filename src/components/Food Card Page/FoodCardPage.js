@@ -14,7 +14,8 @@ function FoodCardPage() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getFoodCardBalanceThunk);
+        // TODO-1: This can be removed
+        // dispatch(getFoodCardBalanceThunk);
         dispatch(getFoodCardTxnsThunk);
     });
 

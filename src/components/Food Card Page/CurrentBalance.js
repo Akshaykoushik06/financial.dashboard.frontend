@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { loading } from '../../redux/loading/selectors';
-import { foodCardBalance } from '../../redux/foodCard/selectors';
+import { getFoodCardBalance } from '../../redux/homePage/selectors';
 
 function CurrentBalance() {
     const isLoading = useSelector(loading);
-    const data = useSelector(foodCardBalance);
+    const data = useSelector(getFoodCardBalance);
 
     // if (isLoading) {
     //     return <h1>loading...</h1>;

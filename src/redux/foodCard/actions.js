@@ -24,6 +24,7 @@ export function getFoodCardTxnsThunk(dispatch) {
         });
 }
 
+// TODO-1: The below method can be removed
 export function getFoodCardBalanceThunk(dispatch) {
     // dispatch({ type: SET_LOADING_TRUE });
     axios
