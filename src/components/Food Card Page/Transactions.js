@@ -11,7 +11,7 @@ function Transactions() {
         date: '',
         description: '',
         amount: '',
-        credit: false,
+        credit: true,
         _id: '',
     });
 
@@ -19,10 +19,9 @@ function Transactions() {
         return <h1>loading...</h1>;
     }
 
-    function deleteTxn(txn) {
+    function deleteTxn(id) {
         const data = {
-            _id: txn._id,
-            amount: txn.amount,
+            _id: id,
         };
         axios
             .delete('foodcard/deletetxn/', { data: data })
@@ -35,15 +34,8 @@ function Transactions() {
     }
 
     function getTxnDetails(id) {
-        axios
-            .get(`/foodcard/gettxnbyid/${id}`)
-            .then((res) => {
-                const newData = { ...res.data };
-                newData['credit'] = false;
-                setFormData(newData);
-                console.log('GET TRANSACTION DETAILS - SUCCESS');
-            })
-            .catch((err) => console.error(err));
+        const txn = data.find((item) => item._id === id);
+        setFormData(txn);
     }
 
     function handleSave(e) {
@@ -65,6 +57,15 @@ function Transactions() {
             .put('/foodcard/edittxn/', data)
             .then((res) => console.log(res.data))
             .catch((err) => console.error(err));
+    }
+
+    function returnNote() {
+        const note = formData.credit ? 'credit' : 'debit';
+        return (
+            <div className="text-muted">
+                Note: This was a {note} transaction.
+            </div>
+        );
     }
 
     return (
@@ -105,7 +106,7 @@ function Transactions() {
                                             Edit
                                         </button>
                                         <button
-                                            onClick={() => deleteTxn(txn)}
+                                            onClick={() => deleteTxn(txn._id)}
                                             type="button"
                                             className="btn btn-secondary badge-pill"
                                         >
@@ -135,7 +136,7 @@ function Transactions() {
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title" id="exampleModalLabel">
-                                Add Transaction
+                                Edit Transaction
                             </h5>
                             <button
                                 type="button"
@@ -148,6 +149,8 @@ function Transactions() {
                         </div>
                         <form onSubmit={(e) => postData(e)}>
                             <div className="modal-body">
+                                {returnNote()}
+                                <hr />
                                 <div className="form-group">
                                     <label for="date">Date</label>
                                     <input
@@ -179,21 +182,6 @@ function Transactions() {
                                         id="amount"
                                         placeholder="How much?"
                                     />
-                                </div>
-                                <div className="form-check">
-                                    <input
-                                        onChange={(e) => handleSave(e)}
-                                        value={formData.credit}
-                                        type="checkbox"
-                                        className="form-check-input"
-                                        id="credit"
-                                    />
-                                    <label
-                                        className="form-check-label"
-                                        for="credit"
-                                    >
-                                        Credit
-                                    </label>
                                 </div>
                             </div>
                             <div className="modal-footer">
