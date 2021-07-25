@@ -5,11 +5,13 @@ import { homePageReducer } from './homePage/reducer';
 import { loadingStateReducer } from './loading/reducer';
 import { dummyReducer } from './anotherStore/reducer';
 import { foodCardReducer } from './foodCard/reducer';
+import { creditCardReducer } from './creditCard/reducer';
 
 const rootReducer = combineReducers({
-    foodCard: foodCardReducer,
     homePage: homePageReducer,
     loading: loadingStateReducer,
+    foodCard: foodCardReducer,
+    creditCard: creditCardReducer,
     dummy: dummyReducer,
 });
 

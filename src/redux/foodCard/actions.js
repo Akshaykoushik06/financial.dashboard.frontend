@@ -24,13 +24,12 @@ export function getFoodCardTxnsThunk(dispatch) {
         });
 }
 
-// TODO-1: The below method can be removed
 export function getFoodCardBalanceThunk(dispatch) {
     // dispatch({ type: SET_LOADING_TRUE });
     axios
         .get('/api/foodcardbalance/')
         .then((res) => {
-            dispatch({ type: SET_LOADING_FALSE });
+            // dispatch({ type: SET_LOADING_FALSE });
             dispatch({
                 type: GET_FOOD_CARD_BALANCE_SUCCESSFUL,
                 payload: res.data,
