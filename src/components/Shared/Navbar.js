@@ -24,11 +24,11 @@ function Navbar() {
                             <span className="nav-link">Gold</span>
                         </li>
                     </Link>
-                    <Link to="/foodcard" className="text-decoration-none">
+                    {/* <Link to="/foodcard" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Food Card</span>
                         </li>
-                    </Link>
+                    </Link> */}
                     <Link to="/pf" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Provident Fund</span>

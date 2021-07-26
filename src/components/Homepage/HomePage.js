@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getHomePageDetailsThunk } from '../../redux/homePage/actions';
+import { getCreditCardTxnsThunk } from '../../redux/creditCard/actions';
 import Networth from './Networth';
 import Assets from './Assets';
 import Liabilities from './Liabilities';
@@ -13,6 +14,7 @@ function HomePage() {
 
     useEffect(() => {
         dispatch(getHomePageDetailsThunk);
+        dispatch(getCreditCardTxnsThunk);
     }, []);
 
     if (isLoading) {

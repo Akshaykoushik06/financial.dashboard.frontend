@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { getFoodCardBalance } from '../../../redux/homePage/selectors';
@@ -9,10 +10,12 @@ function FoodCardVMenu() {
     return (
         <div className="card-deck">
             <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">Happay Food Card</h5>
-                    <p className="card-text">&#8377; {foodCardBalance}</p>
-                </div>
+                <Link to="foodcard/" className="text-decoration-none">
+                    <div className="card-body">
+                        <h5 className="card-title">Happay Food Card</h5>
+                        <p className="card-text">&#8377; {foodCardBalance}</p>
+                    </div>
+                </Link>
             </div>
             {/* <div className="card">
                 <div className="card-body">
