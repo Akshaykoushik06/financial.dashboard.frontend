@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { loading } from '../../redux/loading/selectors';
-import { foodCardTxns } from '../../redux/foodCard/selectors';
+import { bankAccTxns } from '../../redux/bankAccounts/selectors';
+import { bankName } from '../../redux/bankAccounts/selectors';
 
 function Transactions() {
+    const bank = useSelector(bankName);
     const isLoading = useSelector(loading);
-    const data = useSelector(foodCardTxns);
+    const data = useSelector(bankAccTxns);
     const [formData, setFormData] = useState({
         date: '',
         description: '',
@@ -24,7 +26,7 @@ function Transactions() {
             _id: id,
         };
         axios
-            .delete('/foodcard/deletetxn/', { data: data })
+            .delete(`/bankacc/deltxn/${bank}`, { data: data })
             .then((res) => {
                 console.log('DELETE TXN SUCCESS', res);
             })
@@ -54,7 +56,7 @@ function Transactions() {
             _id: formData._id,
         };
         axios
-            .put('/foodcard/edittxn/', data)
+            .put(`/bankacc/edittxn/${bank}`, data)
             .then((res) => console.log(res.data))
             .catch((err) => console.error(err));
     }

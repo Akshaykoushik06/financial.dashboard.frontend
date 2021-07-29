@@ -6,8 +6,10 @@ import { loadingStateReducer } from './loading/reducer';
 import { dummyReducer } from './anotherStore/reducer';
 import { foodCardReducer } from './foodCard/reducer';
 import { creditCardReducer } from './creditCard/reducer';
+import { bankAccReducer } from './bankAccounts/reducer';
 
 const rootReducer = combineReducers({
+    bankAcc: bankAccReducer,
     homePage: homePageReducer,
     loading: loadingStateReducer,
     foodCard: foodCardReducer,

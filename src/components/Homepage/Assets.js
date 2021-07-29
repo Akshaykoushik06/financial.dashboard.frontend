@@ -65,7 +65,7 @@ function AssetsTrial() {
                             >
                                 Bank Accounts
                             </a>
-                            <a
+                            {/* <a
                                 className="nav-link"
                                 id="v-pills-stocks-tab"
                                 data-toggle="pill"
@@ -97,7 +97,7 @@ function AssetsTrial() {
                                 aria-selected="false"
                             >
                                 Gold
-                            </a>
+                            </a> */}
                             <a
                                 className="nav-link"
                                 id="v-pills-pf-tab"
@@ -132,7 +132,7 @@ function AssetsTrial() {
                             >
                                 <BankAccounts />
                             </div>
-                            <div
+                            {/* <div
                                 className="tab-pane fade"
                                 id="v-pills-stocks"
                                 role="tabpanel"
@@ -155,7 +155,7 @@ function AssetsTrial() {
                                 aria-labelledby="v-pills-gold-tab"
                             >
                                 <GoldVMenu />
-                            </div>
+                            </div> */}
                             <div
                                 className="tab-pane fade"
                                 id="v-pills-pf"

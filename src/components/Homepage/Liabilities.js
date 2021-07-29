@@ -46,7 +46,7 @@ function Liabilities() {
                             >
                                 Loans
                             </a>
-                            <a
+                            {/* <a
                                 className="nav-link"
                                 id="v-pills-emis-tab"
                                 data-toggle="pill"
@@ -56,7 +56,7 @@ function Liabilities() {
                                 aria-selected="false"
                             >
                                 EMIs
-                            </a>
+                            </a> */}
                             <a
                                 className="nav-link"
                                 id="v-pills-credit-cards-tab"
@@ -93,14 +93,14 @@ function Liabilities() {
                             >
                                 <LoansVMenu />
                             </div>
-                            <div
+                            {/* <div
                                 className="tab-pane fade"
                                 id="v-pills-emis"
                                 role="tabpanel"
                                 aria-labelledby="v-pills-emis-tab"
                             >
                                 <EMIsVMenu />
-                            </div>
+                            </div> */}
                             <div
                                 className="tab-pane fade"
                                 id="v-pills-credit-cards"
