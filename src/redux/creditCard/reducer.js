@@ -13,7 +13,6 @@ const initialState = {
 export function creditCardReducer(state = initialState, action) {
     switch (action.type) {
         case GET_CREDIT_CARD_TXNS_SUCCESSFUL:
-            console.log(action.payload);
             return {
                 ...state,
                 currentStatementTxns: action.payload.current_statement_txns,

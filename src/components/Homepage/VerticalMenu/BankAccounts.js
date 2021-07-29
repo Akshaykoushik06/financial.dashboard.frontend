@@ -12,7 +12,10 @@ function BankAccounts() {
     return (
         <div>
             <div className="row row-cols-1 row-cols-md-2">
-                <Link to="/bankacc" className="text-decoration-none">
+                <Link
+                    to={{ pathname: '/bankacc', state: { bank: 'icici' } }}
+                    className="text-decoration-none"
+                >
                     <div className="col mb-4">
                         <div className="card text-center">
                             {/* <img src="..." className="card-img-top" alt="..." /> */}
@@ -27,7 +30,10 @@ function BankAccounts() {
                         </div>
                     </div>
                 </Link>
-                <Link to="/bankacc" className="text-decoration-none">
+                <Link
+                    to={{ pathname: '/bankacc', state: { bank: 'hdfc' } }}
+                    className="text-decoration-none"
+                >
                     <div className="col mb-4">
                         <div className="card text-center bg-success text-white">
                             {/* <img src="..." className="card-img-top" alt="..." /> */}
@@ -40,7 +46,10 @@ function BankAccounts() {
                         </div>
                     </div>
                 </Link>
-                <Link to="/bankacc" className="text-decoration-none">
+                <Link
+                    to={{ pathname: '/bankacc', state: { bank: 'canara' } }}
+                    className="text-decoration-none"
+                >
                     <div className="col mb-4">
                         <div className="card text-center">
                             {/* <img src="..." className="card-img-top" alt="..." /> */}
@@ -55,7 +64,10 @@ function BankAccounts() {
                         </div>
                     </div>
                 </Link>
-                <Link to="/bankacc" className="text-decoration-none">
+                <Link
+                    to={{ pathname: '/bankacc', state: { bank: 'iob' } }}
+                    className="text-decoration-none"
+                >
                     <div className="col mb-4">
                         <div className="card text-center">
                             {/* <img src="..." className="card-img-top" alt="..." /> */}
