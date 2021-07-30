@@ -7,8 +7,10 @@ import { dummyReducer } from './anotherStore/reducer';
 import { foodCardReducer } from './foodCard/reducer';
 import { creditCardReducer } from './creditCard/reducer';
 import { bankAccReducer } from './bankAccounts/reducer';
+import { loansReducer } from './loans/reducer';
 
 const rootReducer = combineReducers({
+    loans: loansReducer,
     bankAcc: bankAccReducer,
     homePage: homePageReducer,
     loading: loadingStateReducer,

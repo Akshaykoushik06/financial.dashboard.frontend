@@ -23,7 +23,7 @@ function Routes() {
                     <Route path="/creditcard" component={CreditCardPage} />
                     <Route path="/foodcard" component={FoodCardPage} />
                     <Route path="/gold" component={GoldPage} />
-                    <Route path="/loansemis" component={LoansEMIsPage} />
+                    <Route path="/loans" component={LoansEMIsPage} />
                     <Route path="/mutualfunds" component={MFsPage} />
                     <Route path="/pf" component={PFsPage} />
                     <Route path="/stocks" component={StocksPage} />

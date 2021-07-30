@@ -10,14 +10,14 @@ function CreditCardsVMenu() {
 
     return (
         <div className="card-deck">
-            <Link to="/creditcard" className="text-decoration-none">
-                <div className="card">
+            <div className="card">
+                <Link to="/creditcard" className="text-decoration-none">
                     <div className="card-body">
                         <h5 className="card-title">Diners Club Millennia</h5>
                         <p className="card-text">&#8377; {data}</p>
                     </div>
-                </div>
-            </Link>
+                </Link>
+            </div>
             {/* <div className="card">
                 </div>
                 <div className="card-body">
