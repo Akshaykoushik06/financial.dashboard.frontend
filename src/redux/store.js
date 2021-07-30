@@ -9,8 +9,10 @@ import { creditCardReducer } from './creditCard/reducer';
 import { bankAccReducer } from './bankAccounts/reducer';
 import { loansReducer } from './loans/reducer';
 import { incomeTaxReducer } from './incomeTax/reducer';
+import { pfReducer } from './pf/reducer';
 
 const rootReducer = combineReducers({
+    pf: pfReducer,
     tax: incomeTaxReducer,
     loans: loansReducer,
     bankAcc: bankAccReducer,
