@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { getAssets } from '../../../redux/homePage/selectors';
 
@@ -9,12 +10,20 @@ function PFVMenu() {
     return (
         <div className="card-deck">
             <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">
-                        Employee Provident Fund (EPF)
-                    </h5>
-                    <p className="card-text">&#8377; {providentFund.value}</p>
-                </div>
+                <Link
+                    to="/pf"
+                    // style={{ color: '#FFF' }}
+                    className="text-decoration-none"
+                >
+                    <div className="card-body">
+                        <h5 className="card-title">
+                            Employee Provident Fund (EPF)
+                        </h5>
+                        <p className="card-text">
+                            &#8377; {providentFund.value}
+                        </p>
+                    </div>
+                </Link>
             </div>
             {/* <div className="card">
                 <div className="card-body">
