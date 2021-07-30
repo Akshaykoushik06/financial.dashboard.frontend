@@ -8,8 +8,10 @@ import { foodCardReducer } from './foodCard/reducer';
 import { creditCardReducer } from './creditCard/reducer';
 import { bankAccReducer } from './bankAccounts/reducer';
 import { loansReducer } from './loans/reducer';
+import { incomeTaxReducer } from './incomeTax/reducer';
 
 const rootReducer = combineReducers({
+    tax: incomeTaxReducer,
     loans: loansReducer,
     bankAcc: bankAccReducer,
     homePage: homePageReducer,

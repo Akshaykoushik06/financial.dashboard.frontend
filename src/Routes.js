@@ -11,6 +11,7 @@ import MFsPage from './components/Mutual Funds Page/MFPage';
 import PFsPage from './components/Provident Funds Page/PFPage';
 import StocksPage from './components/Stocks Page/StocksPage';
 import Navbar from './components/Shared/Navbar';
+import TaxesPage from './components/Taxes Page/TaxesPage';
 
 function Routes() {
     return (
@@ -27,6 +28,7 @@ function Routes() {
                     <Route path="/mutualfunds" component={MFsPage} />
                     <Route path="/pf" component={PFsPage} />
                     <Route path="/stocks" component={StocksPage} />
+                    <Route path="/incometax" component={TaxesPage} />
                 </Switch>
             </Router>
         </div>
