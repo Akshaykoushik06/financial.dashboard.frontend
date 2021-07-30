@@ -2,18 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { getFoodCardBalance } from '../../../redux/homePage/selectors';
+import { foodCardBalance } from '../../../redux/homePage/selectors';
 
 function FoodCardVMenu() {
-    const foodCardBalance = useSelector(getFoodCardBalance);
+    const data = useSelector(foodCardBalance);
 
     return (
         <div className="card-deck">
             <div className="card">
-                <Link to="foodcard/" className="text-decoration-none">
+                <Link
+                    to="foodcard/"
+                    className="text-decoration-none"
+                    style={{ color: '#000' }}
+                >
                     <div className="card-body">
                         <h5 className="card-title">Happay Food Card</h5>
-                        <p className="card-text">&#8377; {foodCardBalance}</p>
+                        <p className="card-text">&#8377; {data}</p>
                     </div>
                 </Link>
             </div>

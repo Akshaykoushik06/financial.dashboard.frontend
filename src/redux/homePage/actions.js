@@ -5,9 +5,6 @@ import { SET_LOADING_TRUE, SET_LOADING_FALSE } from '../loading/actions';
 // action types
 export const GET_HOMEPAGE_DATA_SUCCESSFUL = 'Get Homepage Data Successful';
 
-// axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
-// axios.defaults.xsrfCookieName = 'csrftoken';
-// axios.defaults.withCredentials = true;
 // action creators
 export function getHomePageDetailsThunk(dispatch) {
     dispatch({ type: SET_LOADING_TRUE });

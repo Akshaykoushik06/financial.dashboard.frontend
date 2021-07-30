@@ -2,26 +2,24 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { getAssets } from '../../../redux/homePage/selectors';
+import { pfBalance } from '../../../redux/homePage/selectors';
 
 function PFVMenu() {
-    const providentFund = useSelector(getAssets).providentFund;
+    const providentFund = useSelector(pfBalance);
 
     return (
         <div className="card-deck">
             <div className="card">
                 <Link
                     to="/pf"
-                    // style={{ color: '#FFF' }}
+                    style={{ color: '#000' }}
                     className="text-decoration-none"
                 >
                     <div className="card-body">
                         <h5 className="card-title">
                             Employee Provident Fund (EPF)
                         </h5>
-                        <p className="card-text">
-                            &#8377; {providentFund.value}
-                        </p>
+                        <p className="card-text">&#8377; {providentFund}</p>
                     </div>
                 </Link>
             </div>

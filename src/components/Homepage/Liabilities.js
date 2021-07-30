@@ -5,10 +5,10 @@ import LoansVMenu from './VerticalMenu/Loans';
 import EMIsVMenu from './VerticalMenu/EMIs';
 import CreditCardsVMenu from './VerticalMenu/CreditCards';
 import IncomeTaxVMenu from './VerticalMenu/IncomeTax';
-import { getLiabilities } from '../../redux/homePage/selectors';
+import { totalLiability } from '../../redux/homePage/selectors';
 
 function Liabilities() {
-    const liabilities = useSelector(getLiabilities);
+    const liability = useSelector(totalLiability);
 
     return (
         <div className="jumbotron jumbotron-fluid">
@@ -21,9 +21,7 @@ function Liabilities() {
                             Total liability
                         </h5>
                         {/* <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6> */}
-                        <p className="card-text">
-                            &#8377; {liabilities.totalLiability}
-                        </p>
+                        <p className="card-text">&#8377; {liability}</p>
                     </div>
                 </div>
                 <br />

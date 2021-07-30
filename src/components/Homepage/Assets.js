@@ -7,10 +7,16 @@ import MFVMenu from './VerticalMenu/MFVMenu';
 import GoldVMenu from './VerticalMenu/Gold';
 import PFVMenu from './VerticalMenu/PF';
 import FoodCardVMenu from './VerticalMenu/FoodCard';
-import { getAssets } from '../../redux/homePage/selectors';
+import {
+    totalAssets,
+    liquidAssets,
+    fixedAssets,
+} from '../../redux/homePage/selectors';
 
 function AssetsTrial() {
-    const assets = useSelector(getAssets);
+    const total = useSelector(totalAssets);
+    const liquid = useSelector(liquidAssets);
+    const fixed = useSelector(fixedAssets);
 
     return (
         <div className="jumbotron jumbotron-fluid">
@@ -21,9 +27,7 @@ function AssetsTrial() {
                     <div className="card-body">
                         <h5 className="card-title text-center">Total assets</h5>
                         {/* <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6> */}
-                        <p className="card-text">
-                            &#8377; {assets.totalAssets}
-                        </p>
+                        <p className="card-text">&#8377; {total}</p>
                     </div>
                 </div>
                 <br />
@@ -31,17 +35,13 @@ function AssetsTrial() {
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Liquid assets</h5>
-                            <p className="card-text">
-                                &#8377; {assets.liquidAssets}
-                            </p>
+                            <p className="card-text">&#8377; {liquid}</p>
                         </div>
                     </div>
                     <div className="card">
                         <div className="card-body">
                             <h5 className="card-title">Fixed Assets</h5>
-                            <p className="card-text">
-                                &#8377; {assets.fixedAssets}
-                            </p>
+                            <p className="card-text">&#8377; {fixed}</p>
                         </div>
                     </div>
                 </div>

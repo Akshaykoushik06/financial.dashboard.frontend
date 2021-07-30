@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
             <div className="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-                <ul className="navbar-nav mr-auto">
+                {/* <ul className="navbar-nav mr-auto">
                     <Link to="/stocks" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Stocks</span>
@@ -24,17 +24,17 @@ function Navbar() {
                             <span className="nav-link">Gold</span>
                         </li>
                     </Link>
-                    {/* <Link to="/foodcard" className="text-decoration-none">
+                    <Link to="/foodcard" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Food Card</span>
                         </li>
-                    </Link> */}
+                    </Link>
                     <Link to="/pf" className="text-decoration-none">
                         <li className="nav-item">
                             <span className="nav-link">Provident Fund</span>
                         </li>
                     </Link>
-                </ul>
+                </ul> */}
             </div>
             <div className="mx-auto order-0">
                 <Link to="/" className="text-decoration-none">

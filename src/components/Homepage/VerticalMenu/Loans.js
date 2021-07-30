@@ -2,36 +2,47 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { getLiabilities } from '../../../redux/homePage/selectors';
+import { loans } from '../../../redux/homePage/selectors';
 
 function LoansVMenu() {
-    const loans = useSelector(getLiabilities).loans;
+    const loanData = useSelector(loans);
 
     return (
-        <div className="card-deck">
+        <Link
+            to="/loans"
+            className="text-decoration-none"
+            style={{ color: '#000000' }}
+        >
             <div className="card">
-                <Link to="/loans" className="text-decoration-none">
-                    <div className="card-body">
-                        <h5 className="card-title">2-Wheeler Loan</h5>
-                        <p className="card-text">
-                            &#8377; {loans.twoWheelerLoan}
-                        </p>
-                    </div>
-                </Link>
-            </div>
-            {/* <div className="card">
                 <div className="card-body">
-                    <h5 className="card-title">Current Value</h5>
-                    <p className="card-text">&#8377; 1,650.00</p>
+                    <h5 className="card-title">Two Wheeler Loan</h5>
+                    <p className="card-text text-left">
+                        <span className="font-weight-bold">Amount paid:</span>
+                        <span> &#8377; {loanData.amount_paid} </span>
+                    </p>
+                    <p className="card-text text-left">
+                        <span className="font-weight-bold">
+                            Total Amount to pay:
+                        </span>
+                        <span> &#8377; {loanData.amount_to_pay} </span>
+                    </p>
                 </div>
             </div>
-            <div className="card bg-success text-white">
-                <div className="card-body">
-                    <h5 className="card-title">Profit/Loss</h5>
-                    <p className="card-text">&#8377; 150.00</p>
-                </div>
-            </div> */}
-        </div>
+        </Link>
+        // <div className="card-deck">
+        //     <div className="card">
+        //         <div className="card-body">
+        //             <h5 className="card-title">Current Value</h5>
+        //             <p className="card-text">&#8377; 1,650.00</p>
+        //         </div>
+        //     </div>
+        //     <div className="card bg-success text-white">
+        //         <div className="card-body">
+        //             <h5 className="card-title">Profit/Loss</h5>
+        //             <p className="card-text">&#8377; 150.00</p>
+        //         </div>
+        //     </div>
+        // </div>
     );
 }
 

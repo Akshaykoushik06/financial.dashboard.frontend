@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 // import InfoIcon from '../../../icons/Info';
-import { getAssets } from '../../../redux/homePage/selectors';
+// import { getAssets } from '../../../redux/homePage/selectors';
 
 function StocksVMenu() {
-    const stocks = useSelector(getAssets).stocks;
+    // const stocks = useSelector(getAssets).stocks;
 
     return (
         <div>
@@ -13,19 +13,19 @@ function StocksVMenu() {
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title">Money Invested</h5>
-                        <p className="card-text">&#8377; {stocks.invested}</p>
+                        <p className="card-text">&#8377; 12354</p>
                     </div>
                 </div>
                 <div className="card">
                     <div className="card-body">
                         <h5 className="card-title">Current Value</h5>
-                        <p className="card-text">&#8377; {stocks.curValue}</p>
+                        <p className="card-text">&#8377; 12354</p>
                     </div>
                 </div>
                 <div className="card bg-success text-white">
                     <div className="card-body">
                         <h5 className="card-title">Profit/Loss</h5>
-                        <p className="card-text">&#8377; {stocks.profitLoss}</p>
+                        <p className="card-text">&#8377; 12354</p>
                     </div>
                 </div>
             </div>
