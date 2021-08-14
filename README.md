@@ -2,6 +2,7 @@
 
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 - This project uses Bootstrap as its CSS framework.
+- Use this project with the django backend - (link)[https://github.com/Akshaykoushik06/financial.dashboard.backend].
 
 ## Available Scripts
 
